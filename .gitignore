@@ -1,0 +1,4 @@
+
+#除外したいファイル
+/BigDecimal/*.class
+/BigInteger/*.class

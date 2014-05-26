@@ -1,0 +1,46 @@
+BigDecimal	add(BigDecimal a)	aを加算する
+BigDecimal	subtract(BigDecimal a)	aを減算する
+BigDecimal	multiply(BigDecimal a)	aを乗算する
+BigDecimal	divide(BigDecimal a, int b, int c)	aを除算する。条件として小数第b位で除算し、丸め方法はcとする。 丸め方法は[1]を参照
+
+int	intValue()	BigDecimal値をint型で返す
+long	longValue()	BigDecimal値をlong型で返す
+float	floatValue()	BigDecimal値をfloat型で返す
+double	doubleValue()	BigDecimal値をdouble型で返す
+int	signum()	BigDecimal値の符号を返す 負値：-1 ゼロ：0 正値：1
+BigDecimal	max(BigDecimal a)	aの値と比較して大きいほうを返す
+BigDecimal	min(BigDecimal a)	aの値と比較して小さいほうを返す
+
+
+
+
+
+[1]
+
+ROUND_CEILING	正の無限大に近づくように丸めるモード
+（例）42.1→43.0、-42.1→-42.0
+
+ROUND_DOWN	ゼロに近づくように丸めるモード
+（例）42.1→42.0、-42.1→-42.0
+
+ROUND_FLOOR	負の無限大に近づくように丸めるモード
+（例）42.1→42.0、-42.1→-43.0
+
+ROUND_HALF_DOWN	五捨六入する
+（例）42.5→42.0、42.6→43.0、
+　-42.5→-42.0、-42.6→-43.0
+
+ROUND_HALF_EVEN	末尾が偶数のほうに丸める
+（例）42.4→42.0、42.5→42.0、
+　43.4→43.0、43.5→44.0、
+　-42.4→-42.0、-42.5→-42.0、
+　-43.4→-43.0、-43.5→-44.0
+
+ROUND_HALF_UP	四捨五入する
+（例）42.4→42.0、42.5→43.0、
+　-42.4→-42.0、-42.5→-43.0
+
+ROUND_UNNECESSARY	丸め不要
+
+ROUND_UP	0 から離れるように丸めるモード
+（例）42.1→43.0、-42.1→-43.0
